@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Water demand 100 years visualisation</title>
+ <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <style>
+
+
+
+
+
+#fullPage {
+  box-sizing: border-box; 
+  min-height: 98vh;
+  max-width:98vw;
+  border: 4px solid blue;
+  padding-bottom:4%;
+  
+}
+
+h1{
+ 
+    text-align:center;
+    font-size: 32px !important;
+
+
+}
+
+button{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height:120px;
+    padding:20px;
+    font-size: 20px;
+}
+
+
+table{
+    background: #e1f4fc;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    visibility: hidden;
+    max-width: 650px;
+	
+
+
+}
+
+td{
+  text-align:center;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 100px;
+}
+
+#hidden-image1 {
+    visibility: hidden;
+
+}
+
+#hidden-image2 {
+  visibility: hidden;
+
+}
+
+#hidden-image3 {
+    visibility: hidden;
+
+}
+
+#hidden-image4 {
+  visibility: hidden;
+
+}
+
+#hidden-image5 {
+    visibility: hidden;
+
+}
+
+#hidden-image6 {
+  visibility: hidden;
+
+}
+
+      
+  </style>
+
+  <script>
+    var percentage = 1;
+    var timer;
+    function onClick(){
+      var button=document.getElementById("run");
+      button.style.display="none";
+	  
+	  var el = document.getElementById("counter");
+      el.style.visibility = "visible";
+	  
+	  var firstPageGlobe=document.getElementById("firstPageGlobe");
+      firstPageGlobe.style.display="none";
+      
+
+     timer = setInterval(displayCounter, 10);  
+      
+        
+    }
+
+    function displayCounter() {
+	  if(percentage%5==0){
+        document.getElementById("counter").innerHTML = "Increase in the previous 100 years: "+percentage+ "%";
+	  }
+	  percentage++;
+
+	  var el = document.getElementById("main");
+      el.style.visibility = "visible";
+      if(percentage==601){
+        clearInterval(timer);
+      }
+	 if(percentage==100){
+	  var el = document.getElementById("hidden-image1");
+      el.style.visibility = "visible";
+     }
+	 else if(percentage==200){
+	   var el2 = document.getElementById("hidden-image2");
+       el2.style.visibility = "visible";
+	 }
+	 else if(percentage==300){
+	   var el3 = document.getElementById("hidden-image3");
+       el3.style.visibility = "visible";
+	 }
+	 else if(percentage==400){
+	   var el4 = document.getElementById("hidden-image4");
+       el4.style.visibility = "visible";
+	 }
+	 else if(percentage==500){
+	   var el5 = document.getElementById("hidden-image5");
+       el5.style.visibility = "visible";
+	 }
+	 else if(percentage==600){
+	   var el6 = document.getElementById("hidden-image6");
+       el6.style.visibility = "visible";
+	 }
+     	 
+	  
+	  
+    }
+
+ 
+      
+  </script>
+
+
+
+    
+</head>
+<body>
+
+  <div id="fullPage">
+    <h1>Global Water Demand</h1>
+    <br/>
+    <img id = "firstPageGlobe"src="globe.svg" style="width:100px; padding-top: 3%;">
+    <br/>
+    
+    <h1 id= "counter" style="visibility:hidden;">1</h1>
+
+
+    <table id = "main"  height=50% width=80% border=0px> 
+        <tr> 
+            <td id="hidden-image1"><img src="globe.svg" style="width:100px; padding-top: 5%;" ></td>
+            <td id="hidden-image2"><img src="globe.svg" style="width:100px; padding-top: 5%;"></td>
+            <td id="hidden-image3"><img src="globe.svg" style="width:100px; padding-top: 5%;"></td>
+        </tr>
+
+        <tr> 
+            <td id="hidden-image4"><img src="globe.svg" style="width:100px;padding-top: 5%;" ></td>
+            <td id="hidden-image5"><img src="globe.svg" style="width:100px; padding-top: 5%;"></td>
+            <td id="hidden-image6"><img src="globe.svg" style="width:100px; padding-top: 5%;"></td>
+        </tr>
+          
+    </table>
+	
+    <br/>
+    <button id= "run"type="button" onclick="onClick()">Increase in the previous 100 years?</button>
+	
+	</div>
+
+
+    
+
+
+
+
+</body>
+</html>
