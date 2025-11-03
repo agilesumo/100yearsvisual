@@ -74,7 +74,6 @@ table{
     
     
     max-width: 550px;
-	display:none;
 	
 
 
@@ -132,7 +131,7 @@ td{
 	  var firstPageGlobe=document.getElementById("firstPageGlobe");
       firstPageGlobe.style.display="none";
 
-		var html = "<table id='imgTable' height=50% width=80% border=0px> <tr>";
+		var html = "<table id='imgTable' border=0px> <tr>";
           html += "<td>v1</td><td>v2</td></tr>";
           html += "<tr><td>v3</td><td>v4</td></tr>";
           html += "</table>";
@@ -203,7 +202,7 @@ td{
     <div id="imageTable">
 	</div>
 
-    <table id = "main"  height=50% width=80% border=0px> 
+    <table id = "main" style="display:none;"  height=50% width=80% border=0px> 
         <tr> 
             <td id="hidden-image1"><img src="globe.svg" style="width:90%; padding-top: 5%;" ></td>
             <td id="hidden-image2"><img src="globe.svg" style="width:90%; padding-top: 5%;"></td>
