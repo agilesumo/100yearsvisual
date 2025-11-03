@@ -122,7 +122,7 @@ td{
   <script>
     var percentage = 1;
     var timer;
-    function onClick(){
+    function runAnimation(){
       var button=document.getElementById("run");
       button.style.display="none";
 	  
@@ -145,8 +145,8 @@ td{
 	  percentage++;
 
 	  var el = document.getElementById("main");
-      el.style.display = "unset";
-	  el.style.max-height="100%";
+      //el.style.display = "unset";
+	 // el.style.max-height="100%";
       if(percentage==601){
         clearInterval(timer);
       }
@@ -213,7 +213,7 @@ td{
     </table>
 	
     <br/>
-    <button id= "run"type="button" onclick="onClick()">Increase in the previous 100 years?</button>
+    <button id= "run" onclick="runAnimation()">Increase in the previous 100 years?</button>
 	<br/>
 
 </div>
