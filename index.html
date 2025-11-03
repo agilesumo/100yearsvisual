@@ -130,13 +130,25 @@ td{
       firstPageGlobe.style.display="none";
 
 		var html = "<table id='imgTable' > <tr>";
-          html += "<td>v1</td><td>v2</td></tr>";
-          html += "<tr><td>v3</td><td>v4</td></tr>";
+          html += "<td id='hidden-image1'><img src='globe.svg'></td>";
+          html += "<td id='hidden-image2'><img src='globe.svg'></td>";
+		  html += "<td id='hidden-image3'><img src='globe.svg'></td>";
+
           html += "</table>";
           document.getElementById('imageTable').innerHTML = html;
 
           timer = setInterval(displayCounter, 10);  
-      
+              <tr> 
+            
+            <td id="hidden-image2"><img src="globe.svg" style="width:90%; padding-top: 5%;"></td>
+            <td id="hidden-image3"><img src="globe.svg" style="width:90%; padding-top: 5%;"></td>
+        </tr>
+
+        <tr> 
+            <td id="hidden-image4"><img src="globe.svg" style="width:90%;padding-top: 5%;" ></td>
+            <td id="hidden-image5"><img src="globe.svg" style="width:90%; padding-top: 5%;"></td>
+            <td id="hidden-image6"><img src="globe.svg" style="width:90%; padding-top: 5%;"></td>
+        </tr>
         
     }
 
@@ -201,17 +213,7 @@ td{
 	</div>
 
     <table id = "main" style="display:none;"  height=50% width=80% border=0px> 
-        <tr> 
-            <td id="hidden-image1"><img src="globe.svg" style="width:90%; padding-top: 5%;" ></td>
-            <td id="hidden-image2"><img src="globe.svg" style="width:90%; padding-top: 5%;"></td>
-            <td id="hidden-image3"><img src="globe.svg" style="width:90%; padding-top: 5%;"></td>
-        </tr>
 
-        <tr> 
-            <td id="hidden-image4"><img src="globe.svg" style="width:90%;padding-top: 5%;" ></td>
-            <td id="hidden-image5"><img src="globe.svg" style="width:90%; padding-top: 5%;"></td>
-            <td id="hidden-image6"><img src="globe.svg" style="width:90%; padding-top: 5%;"></td>
-        </tr>
           
     </table>
 	
