@@ -131,9 +131,14 @@ td{
 	  
 	  var firstPageGlobe=document.getElementById("firstPageGlobe");
       firstPageGlobe.style.display="none";
-      
 
-     timer = setInterval(displayCounter, 10);  
+		var html = "<table";
+          html += "<tr><td>v1</td><td>v2</td></tr>";
+          html += "<tr><td>v3</td><td>v4</td></tr>";
+          html += "</table>";
+          document.getElementById('imageTable').innerHTML = html;
+
+          timer = setInterval(displayCounter, 10);  
       
         
     }
@@ -195,7 +200,8 @@ td{
     <br/>
     
     <h1 id= "counter" style="visibility:hidden;">1</h1>
-
+    <div id="imageTable">
+	</div>
 
     <table id = "main"  height=50% width=80% border=0px> 
         <tr> 
