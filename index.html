@@ -174,8 +174,6 @@ td{
 	  var el = document.getElementById("counter");
       el.style.visibility = "visible";
 	  
-	  var firstPageGlobe=document.getElementById("firstPageGlobe");
-      firstPageGlobe.style.display="none";
 
 		var html = "<table id='imgTable' > <tr>";
           html += "<td id='hidden-image1'><img class='smallerImage' src='globe.svg'></td>";
@@ -188,6 +186,9 @@ td{
 
           html += "</table>";
           document.getElementById('imageTable').innerHTML = html;
+          
+		  var firstPageGlobe=document.getElementById("firstPageGlobe");
+          firstPageGlobe.style.display="none";
 
           timer = setInterval(displayCounter, 10);  
  
@@ -255,10 +256,7 @@ td{
     <div id="imageTable">
 	</div>
 
-    <!--table id = "main" style="display:none;"  height=50% width=80% border=0px--> 
 
-          
-    </table>
 	
     <br/>
     <button id= "run" onclick="runAnimation()">Increase in the previous 100 years?</button>
