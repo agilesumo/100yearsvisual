@@ -39,9 +39,12 @@ button{
 }
 	
 	
-.smallerImage{
-  max-width: 70%;
-}
+  .smallerImage{
+	  max-width: 55%;
+	  text-align:center;
+
+
+  }
 
 	
 
@@ -65,6 +68,11 @@ table{
 
 td{
   text-align:center;
+}
+
+#spacing {
+    visibility: hidden;
+
 }
 
 
@@ -132,8 +140,10 @@ td{
   }
 
   .smallerImage{
-	  min-width: 60%;
-	  max-width: 60%;
+	  min-width: 80%;
+	  max-width: 80%;
+	  text-align:center;
+
 
   }
 
@@ -143,6 +153,11 @@ td{
 	font-size:3.2rem;
 
   }
+
+  #spacing {
+    visibility: visible;
+
+}
 	
 }
   /*================================================================= */
@@ -232,7 +247,7 @@ td{
 <body>
 <div id="content">
     <h1>Global Water Demand</h1>
-    <br/>
+    <br id="spacing"/>
     <img id = "firstPageGlobe"src="globe.svg">
     <br/>
     
