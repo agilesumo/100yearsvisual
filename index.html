@@ -81,7 +81,6 @@ td{
   visibility: hidden;
 }
 
-}
 
 #hidden-image2 {
   visibility: hidden;
@@ -139,8 +138,8 @@ td{
   }
 
   .smallerImage{
-	  min-width: 80%;
-	  max-width: 80%;
+	  min-width: 90%;
+	  max-width: 90%;
 	  text-align:center;
 
 
@@ -173,6 +172,9 @@ td{
 	  
 	  var el = document.getElementById("counter");
       el.style.visibility = "visible";
+
+		var firstPageGlobe=document.getElementById("firstPageGlobe");
+        firstPageGlobe.style.display="none";
 	  
 
 		var html = "<table id='imgTable' > <tr>";
@@ -187,8 +189,7 @@ td{
           html += "</table>";
           document.getElementById('imageTable').innerHTML = html;
           
-		  var firstPageGlobe=document.getElementById("firstPageGlobe");
-          //firstPageGlobe.style.display="none";
+
 
           timer = setInterval(displayCounter, 10);  
  
