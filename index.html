@@ -188,7 +188,7 @@ td{
           document.getElementById('imageTable').innerHTML = html;
           
 		  var firstPageGlobe=document.getElementById("firstPageGlobe");
-          firstPageGlobe.style.display="none";
+          //firstPageGlobe.style.display="none";
 
           timer = setInterval(displayCounter, 10);  
  
@@ -201,9 +201,6 @@ td{
 	  }
 	  percentage++;
 
-	  var el = document.getElementById("main");
-      //el.style.display = "unset";
-	 // el.style.max-height="100%";
       if(percentage==601){
         clearInterval(timer);
       }
